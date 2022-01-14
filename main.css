@@ -12,7 +12,8 @@
     --product-name-color: #18191F;
     --product-details-color: #787885;
     --product-price-color: #000000DE;
-    ;
+    --footer-primary-text-color: #FFFFFF;
+    --footer-secondary-text-color: #D9DBE1;
 }
 
 /* common variables ends */
@@ -38,9 +39,9 @@ body {
     border: none;
     font-size: 17px;
     color: var(--primary-button-font-color);
-    border-radius: 28px;
+    border-radius: 15px;
     font-family: 'Poppins';
-    margin-top: 3%;
+    margin-top: 0%;
     box-shadow: 0px 0px 3px -1px black;
 }
 
@@ -113,10 +114,11 @@ nav.navbar ul li a {
 
 .banner-text p {
     margin-top: 16px;
+    margin-bottom: 3%;
     font-size: 16px;
     text-align: justify;
     width: 469px;
-    color: var(--primary-font-color)
+    color: var(--primary-font-color);
 }
 
 .banner-text p strong {
@@ -189,6 +191,7 @@ nav.navbar ul li a {
 .products {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
 }
 
 .product {
@@ -255,5 +258,100 @@ i.fas.fa-star {
     margin-bottom: 5%;
 }
 
+.product-show {
+    position: relative;
+    right: -88%;
+    text-decoration: none;
+    color: var(--primary-button-color);
+}
+
 /* product details area ends */
 /* products area ends */
+/* subscribe area start */
+.subscribe {
+    margin-top: 4%;
+}
+
+.subscribe-newsletter h1 {
+    font-size: 30px;
+    line-height: 47px;
+    font-weight: 500;
+    color: var(--primary-font-color);
+}
+
+.subscribe-newsletter h1 strong {
+    color: var(--primary-button-color);
+}
+
+.subscribe-newsletter p {
+    font-size: 14px;
+    color: var(--secondary-font-color);
+}
+
+.subscribe-newsletter h1 strong {
+    color: var(--primary-button-color);
+}
+
+.subscribe-form {
+    margin-top: 1%;
+}
+
+form input {
+    margin-top: 2%;
+    margin-bottom: 1%;
+    width: 45%;
+    height: 30px;
+    display: block;
+    color: var(--primary-button-color);
+    background: #8080802e;
+    border: none;
+    padding: 1%;
+    border-radius: 5px;
+    margin-right: 1%;
+    box-shadow: 0px 0px 5px 0px rgba(128, 128, 128, 0.426);
+}
+
+form input:focus {
+    outline: none;
+}
+
+/* subscribe area ends */
+
+/* footer area start */
+.footer {
+    margin-top: 8%;
+    background: #0A0826;
+    padding: 4%;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 24px;
+    color: var(--footer-primary-text-color);
+    font-weight: 500;
+    line-height: 40px;
+}
+
+.footer h3 {
+    font-size: 14px;
+    color: var(--footer-secondary-text-color);
+    font-weight: 300;
+    line-height: 23px;
+}
+
+.footer ul {
+    line-height: 40px;
+    margin-top: 1%;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-right: 1%;
+}
+
+.footer ul li a i {
+    font-size: 18px;
+    color: var(--footer-secondary-text-color);
+}
+
+/* footer area ends */
