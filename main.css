@@ -58,6 +58,10 @@ nav.navbar {
     text-decoration: none;
 }
 
+.responsive-menu {
+    display: none;
+}
+
 .brand a h3 {
     font-size: 24px;
     color: var(--primary-font-color);
@@ -132,6 +136,7 @@ nav.navbar ul li a {
     align-items: center;
     justify-content: center;
     position: relative;
+    animation: banner-area-animation 0.7s ease-in-out .5s infinite alternate-reverse both;
 }
 
 .banner-image.half-width img {
@@ -148,6 +153,7 @@ nav.navbar ul li a {
     z-index: -1;
 }
 
+
 .banner-image.half-width::after {
     content: '';
     border: 1px solid #00000020;
@@ -157,6 +163,18 @@ nav.navbar ul li a {
     border-radius: 50%;
     box-shadow: 0px 0px 1px 0px black;
     z-index: -2;
+}
+
+/* banner area animation */
+
+@keyframes banner-area-animation {
+    0% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* banner image area ends */
@@ -366,13 +384,25 @@ i.footer-social-btn:hover {
     /* navbar */
     nav.navbar {
         margin-top: 3%;
-        flex-direction: column;
-        align-items: baseline;
+        display: block;
     }
 
     nav.navbar ul {
-        width: 100%;
-        margin: auto;
+        display: none;
+    }
+
+    .responsive-menu {
+        display: block;
+    }
+
+    .brand {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .brand a {
+        margin-left: 1%;
     }
 
     /* banner area */
@@ -441,13 +471,21 @@ i.footer-social-btn:hover {
     /* navbar */
     nav.navbar {
         margin-top: 3%;
-        flex-direction: column;
-        align-items: baseline;
+        display: block;
     }
 
     nav.navbar ul {
-        width: 100%;
-        margin: auto;
+        display: none;
+    }
+
+    .responsive-menu {
+        display: block;
+    }
+
+    .brand {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     /* banner area */
@@ -461,7 +499,7 @@ i.footer-social-btn:hover {
 
     .banner-image.half-width {
         order: 1;
-        margin-top: 10%;
+        margin-top: 3%;
     }
 
 
@@ -491,6 +529,10 @@ i.footer-social-btn:hover {
 
     .banner-text p {
         width: 90%;
+        line-height: 20px;
+        font-size: 12px;
+        margin-top: 1%;
+        margin-bottom: 5%;
     }
 
     /* brand logos */
@@ -525,5 +567,9 @@ i.footer-social-btn:hover {
         margin-top: 5%;
         margin-bottom: 4%;
         width: 80%;
+    }
+
+    .subscribe-newsletter h1 {
+        line-height: 40px;
     }
 }
